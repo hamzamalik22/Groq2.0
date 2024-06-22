@@ -60,14 +60,14 @@ const Sidebar = () => {
           <div className="">
           <h1 className="p-6 text-xl">Recent</h1>
           <ul className="pl-4 px-4">
-            <li className="truncate py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full"><span><FiMessageSquare /></span>
-            <p className="flex-shrink-0">Lorem ipsum dolor sit amet.</p>
+            <li className="truncate py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"><span><FiMessageSquare /></span>
+            <p className="flex-shrink-0 text-xs">Lorem ipsum dolor sit amet.</p>
             </li>
-            <li className="py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full"><span><FiMessageSquare /></span>
-            <p className="flex-shrink-0">hello</p>
+            <li className="py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"><span><FiMessageSquare /></span>
+            <p className="flex-shrink-0 text-xs">hello</p>
             </li>
-            <li className="py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full"><span><FiMessageSquare /></span>
-            <p className="flex-shrink-0">hello</p>
+            <li className="py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"><span><FiMessageSquare /></span>
+            <p className="flex-shrink-0 text-xs">hello</p>
             </li>
           </ul>
           </div>

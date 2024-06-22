@@ -5,7 +5,7 @@ import Body from "./Body";
 const Ai = () => {
   return (
     <>
-      <div className="w-full h-screen bg-green-300">
+      <div className="w-full h-screen bg-green-300 flex">
         <Sidebar />
         <Body />
       </div>
