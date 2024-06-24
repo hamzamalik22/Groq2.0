@@ -3,8 +3,8 @@ import conf from "./conf";
 
 const groq = new Groq({ apiKey: conf.apiKey, dangerouslyAllowBrowser: true });
 
-export async function main(question) {
-  const chatCompletion = await getGroqChatCompletion(question);
+export async function main(question, model) {
+  const chatCompletion = await getGroqChatCompletion(question, model);
   // Print the completion returned by the LLM.x
   // console.log(chatCompletion.choices[0]?.message?.content || "");
   const response = chatCompletion.choices[0]?.message?.content || "";
@@ -20,7 +20,7 @@ export async function getGroqChatCompletion(question) {
         content: question,
       },
     ],
-    // model: "llama3-8b-8192",
-    model: "mixtral-8x7b-32768",
+    model: "llama3-8b-8192",
+    // model: "mixtral-8x7b-32768",
   });
 }

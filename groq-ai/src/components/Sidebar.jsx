@@ -8,14 +8,13 @@ import { FiMessageSquare } from "react-icons/fi";
 import { Context } from "../utils/Context";
 
 const Sidebar = () => {
-  const { toggle, setToggle, onSent, prevPrompts, setRecentPrompt } =
+  const { toggle, setToggle, onSent, prevPrompts, setRecentPrompt, newChat } =
     useContext(Context);
 
-    const loadPrompt = async (prompt) => {
-      setRecentPrompt(prompt);
-      await onSent(prompt)
-
-    }
+  const loadPrompt = async (prompt) => {
+    setRecentPrompt(prompt);
+    await onSent(prompt);
+  };
 
   return (
     <>
@@ -23,7 +22,7 @@ const Sidebar = () => {
         <>
           {/* <-- for Desktop --> */}
 
-          <div className="hidden bg-[#1E1F20] w-[5.5%] h-screen text-white min-[900px]:flex flex-col justify-between">
+          <div className="sticky top-0 hidden bg-[#1E1F20] w-[5.5%] h-screen text-white min-[900px]:flex flex-col justify-between">
             <div className="upper flex flex-col pl-4 pt-8 gap-10 text-xl">
               <span
                 className="w-10 h-10 hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer"
@@ -32,7 +31,10 @@ const Sidebar = () => {
                 <MdMenu />
               </span>
 
-              <span className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center cursor-pointer">
+              <span
+                onClick={() => newChat()}
+                className="w-10 h-10 bg-zinc-800 rounded-full flex items-center justify-center cursor-pointer"
+              >
                 <FaPlus />
               </span>
             </div>
@@ -62,7 +64,7 @@ const Sidebar = () => {
         </>
       ) : (
         <>
-          <div className="fixed top-0 left-0 z-50 w-[60%] min-[900px]:relative bg-[#1E1F20] min-[900px]:w-[22%] h-screen text-white flex flex-col justify-between">
+          <div className="sticky md:stikcy top-0 left-0 z-50 w-[60%] min-[900px]:relative bg-[#1E1F20] min-[900px]:w-[22%] h-screen text-white flex flex-col justify-between">
             <div className="upper flex flex-col pl-4 pt-8 gap-10 text-xl">
               <span
                 className="w-10 h-10 hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer"
@@ -71,8 +73,8 @@ const Sidebar = () => {
                 <MdMenu />
               </span>
 
-              <div className="flex bg-zinc-800 w-32 h-10 rounded-full">
-                <span className="w-10 h-10 pl-2 bg-zinc-800 rounded-full justify-center items-center flex cursor-pointer">
+              <div onClick={() => newChat()} className="flex bg-zinc-800 w-32 h-10 rounded-full">
+                <span onClick={() => newChat()} className="w-10 h-10 pl-2 bg-zinc-800 rounded-full justify-center items-center flex cursor-pointer">
                   <FaPlus />
                 </span>
                 <span className="w-full h-10 p-4 bg-zinc-800 justify-center rounded-r-full items-center flex cursor-pointer">
@@ -81,12 +83,17 @@ const Sidebar = () => {
               </div>
             </div>
 
-            <div className="relative bottom-32">
+            <div
+              className={`bottom-24 ${
+                prevPrompts.length === 0 ? "bottom-24" : "bottom-2"
+              } `}
+            >
               <h1 className="p-6 text-xl">Recent</h1>
               <ul className="pl-4 px-4">
-                {prevPrompts.map((item, index) => {
+                {prevPrompts.slice(-5).map((item, index) => {
                   return (
-                    <li onClick={()=> loadPrompt(item)}
+                    <li
+                      onClick={() => loadPrompt(item)}
                       key={index}
                       className="truncate py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"
                     >

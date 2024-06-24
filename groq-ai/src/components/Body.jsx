@@ -6,9 +6,12 @@ import { IoTerminalOutline } from "react-icons/io5";
 import { AiOutlineCompass } from "react-icons/ai";
 import { GrSend } from "react-icons/gr";
 import { MdMenu } from "react-icons/md";
+import { FaRegCopy } from "react-icons/fa";
 import groqimg from "../images/groq.svg";
 import { Context } from "../utils/Context";
 import Loader from "./Loader";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Body = () => {
   const {
@@ -23,9 +26,48 @@ const Body = () => {
     setInput,
   } = useContext(Context);
 
+  const copyToClipboard = (text) => {
+    navigator.clipboard.writeText(text);
+    toast.success("Copied to clipboard!");
+  };
+
+  const renderResultData = (data) => {
+    const codeRegex = /```([\s\S]*?)```/g;
+    const boldRegex = /\*\*([\s\S]*?)\*\*/g;
+    const parts = data.split(codeRegex);
+
+    return parts.map((part, index) => {
+      if (index % 2 === 1) {
+        return (
+          <div key={index} className="relative">
+            <pre className="bg-zinc-800 p-2 rounded-md overflow-auto my-2">
+              {part}
+            </pre>
+            <span
+              className="absolute top-2 right-2 bg-zinc-700 cursor-pointer text-xl hover:bg-zinc-500 p-1 rounded-md"
+              onClick={() => copyToClipboard(part)}
+            >
+              <FaRegCopy />
+            </span>
+          </div>
+        );
+      } else {
+        const boldParts = part.split(boldRegex);
+        return (
+          <p key={index} className="whitespace-pre-wrap my-2">
+            {boldParts.map((boldPart, i) =>
+              i % 2 === 1 ? <b key={i}>{boldPart}</b> : boldPart
+            )}
+          </p>
+        );
+      }
+    });
+  };
+
   return (
     <>
-      <div className="relative bg-zinc-900 w-full min-h-screen max-h-fit text-white ">
+      <ToastContainer />
+      <div className="relative bg-zinc-900 w-full min-h-screen max-h-fit text-white">
         <nav className="flex justify-between items-center pt-8 px-1 md:p-8">
           <div className="flex items-baseline gap-4">
             <div className=" min-[900px]:hidden pl-2 text-2xl">
@@ -48,10 +90,12 @@ const Body = () => {
         {!showResult ? (
           <>
             <div className="flex justify-center pt-12 md:pt-0">
-              <img className="w-[60%] md:[40%]" src={groqimg} alt="" />
+              <img
+                className="w-[60%] md:w-[40%]"
+                src={groqimg}
+                alt="GROQ logo"
+              />
             </div>
-
-            {/* <--- Hero Section ---> */}
 
             <div className="flex gap-10 items-center px-2 md:justify-center pt-20 overflow-x-auto hide-scrollbar">
               <div className="w-42 h-28 rounded-[20px] bg-transparent border py-5 px-4 overflow-hidden flex-shrink-0">
@@ -79,34 +123,41 @@ const Body = () => {
         ) : (
           <>
             <div className="flex flex-col gap-4 px-10">
-              <div className="bg-zinc-800 p-4 mr-10 rounded-lg self-end w-[80%] md:w-fit md:max-w-[80%]">
+              <div className="flex justify-end relative top-16">
+                <img
+                  className="w-12 h-12 rounded-full"
+                  src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436180.jpg"
+                  alt="avatar"
+                />
+              </div>
+              <div className="border p-4 mr-16 rounded-lg self-end w-[80%] md:w-fit md:max-w-[80%]">
                 <p className="whitespace-pre-wrap">{recentPrompt}</p>
               </div>
               {loading ? (
-                <>
-                  <div className="pl-4">
-                    <Loader />
-                  </div>
-                </>
+                <div className="pl-4">
+                  <Loader />
+                </div>
               ) : (
-                <>
-                  <div
-                    className={`flex ${
-                      resultData ? "result-data" : "result-data"
-                    }`}
-                  >
-                    <img
-                      className="w-12 h-12 rounded-full"
-                      src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436180.jpg"
-                      alt=""
-                    />
-                    <div className="bg-gray-900 p-4 ml-6 rounded-lg self-start w-[80%] md:w-[70%] mb-32">
-                      <pre className="whitespace-pre-wrap">
-                        {resultData ? resultData : "No data available."}
-                      </pre>
-                    </div>
+                <div className="flex result-data">
+                  <img
+                    className="w-12 h-12 rounded-full"
+                    src="https://img.freepik.com/free-psd/3d-illustration-person-with-sunglasses_23-2149436180.jpg"
+                    alt="avatar"
+                  />
+                  <div className="border p-4 pt-6 ml-6 rounded-lg self-start w-[80%] md:w-[70%] mb-32 relative">
+                    {resultData
+                      ? renderResultData(resultData)
+                      : "No data available."}
+                    {resultData && (
+                      <span
+                        className="absolute top-2 right-2 bg-zinc-700 cursor-pointer text-xl hover:bg-zinc-500 p-1 rounded-md"
+                        onClick={() => copyToClipboard(resultData)}
+                      >
+                        <FaRegCopy />
+                      </span>
+                    )}
                   </div>
-                </>
+                </div>
               )}
             </div>
           </>

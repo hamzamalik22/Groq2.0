@@ -30,6 +30,12 @@ const ContextProvider = (props) => {
     setInput("");
   };
 
+  const newChat = ()=> {
+    setLoading(false);
+    setShowResult(false);
+  }
+
+
   const contextValue = {
     toggle,
     setToggle,
@@ -46,6 +52,7 @@ const ContextProvider = (props) => {
     resultData,
     setResultData,
     onSent,
+    newChat,
   };
 
   return (
