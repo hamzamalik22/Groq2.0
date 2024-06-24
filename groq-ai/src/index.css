@@ -5,23 +5,94 @@
 @tailwind utilities;
 
 
-*{
-    
-  font-family: "Open Sans", sans-serif; 
+* {
+
+  font-family: "Open Sans", sans-serif;
 }
 
 
 .logo {
   font-family: 'Bebas Neue', sans-serif;
-  
+
 }
 
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  display: none;
+  /* Hide scrollbar for Chrome, Safari, and Opera */
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.dot-flashing {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  margin: 0 auto;
+}
+
+.dot-flashing:before,
+.dot-flashing:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background: white;
+  animation: dotFlashing 1s infinite alternate;
+}
+
+.dot-flashing:before {
+  left: -1em;
+  animation-delay: 0s;
+}
+
+.dot-flashing:after {
+  left: 1em;
+  animation-delay: 0.5s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background: white;
+  }
+
+  50%,
+  100% {
+    background: gray;
+  }
+}
+
+
+/* Add this to your CSS file */
+
+.result-data {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
