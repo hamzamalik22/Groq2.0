@@ -8,12 +8,12 @@ import { FiMessageSquare } from "react-icons/fi";
 import { Context } from "../utils/Context";
 
 const Sidebar = () => {
-  const { toggle, setToggle, onSent, prevPrompts, setRecentPrompt, newChat } =
+  const { toggle, setToggle, onSent, prevPrompts, setRecentPrompt, newChat, selectedModel } =
     useContext(Context);
 
-  const loadPrompt = async (prompt) => {
+  const loadPrompt = async (prompt, model) => {
     setRecentPrompt(prompt);
-    await onSent(prompt);
+    await onSent(prompt, model);
   };
 
   return (
@@ -93,7 +93,7 @@ const Sidebar = () => {
                 {prevPrompts.slice(-5).map((item, index) => {
                   return (
                     <li
-                      onClick={() => loadPrompt(item)}
+                      onClick={() => loadPrompt(item,selectedModel)}
                       key={index}
                       className="truncate py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"
                     >

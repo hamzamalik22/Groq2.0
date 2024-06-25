@@ -9,10 +9,11 @@ export async function main(question, model) {
   // console.log(chatCompletion.choices[0]?.message?.content || "");
   const response = chatCompletion.choices[0]?.message?.content || "";
   console.log(response);
+  console.log(model);
   return response;
 }
 
-export async function getGroqChatCompletion(question) {
+export async function getGroqChatCompletion(question, model) {
   return groq.chat.completions.create({
     messages: [
       {
@@ -20,7 +21,7 @@ export async function getGroqChatCompletion(question) {
         content: question,
       },
     ],
-    model: "llama3-8b-8192",
+    model: model,
     // model: "mixtral-8x7b-32768",
   });
 }

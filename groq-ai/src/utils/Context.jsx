@@ -11,19 +11,20 @@ const ContextProvider = (props) => {
   const [showResult, setShowResult] = useState(false);
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
+  const [selectedModel, setSelectedModel] = useState("llama3-8b-8192");
 
-  const onSent = async (prompt) => {
+  const onSent = async (prompt, model) => {
     setResultData("");
     setLoading(true);
     setShowResult(true);
     let response;
     if (prompt !== undefined) {
-      response = await main(prompt);
+      response = await main(prompt,model);
       setRecentPrompt(prompt);
     } else {
       setPrevPrompts((prev) => [...prev, input]);
       setRecentPrompt(input);
-      response = await main(input);
+      response = await main(input, selectedModel);
     }
     setResultData(response);
     setLoading(false);
@@ -53,6 +54,8 @@ const ContextProvider = (props) => {
     setResultData,
     onSent,
     newChat,
+    selectedModel,
+    setSelectedModel,
   };
 
   return (
