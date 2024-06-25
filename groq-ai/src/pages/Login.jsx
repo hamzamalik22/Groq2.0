@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Login = () => {
   return (
@@ -65,6 +66,7 @@ const Login = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
