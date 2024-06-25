@@ -1,10 +1,9 @@
 import React from "react";
-import Ai from "./components/Ai";
-
+import Router from "./utils/Router";
 const App = () => {
   return (
     <>
-      <Ai />
+      <Router />
     </>
   );
 };
