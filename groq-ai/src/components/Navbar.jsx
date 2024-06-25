@@ -41,7 +41,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/signup"
-                className="max-[400px]:hidden bg-[#2B45C2] font-['DM Sans'] hover:bg-blue-700 text-white rounded-lg py-2 px-4  mx-2"
+                className="max-[400px]:hidden bg-indigo-600 font-['DM Sans'] hover:bg-indigo-700 text-white rounded-lg py-2 px-4  mx-2"
               >
                 Signup
               </Link>
