@@ -15,67 +15,35 @@ const Footer = () => {
             </a>
             <ul className="text-lg text-center sm:flex items-cente justify-center gap-14 lg:gap-10 xl:gap-14 transition-all duration-500">
               <li>
-                <Link
-                  to="/"
-                  className="text-white hover:text-gray-400"
-                >
+                <Link to="/" className="text-white hover:text-gray-400">
                   Home
                 </Link>
               </li>
               <li className="sm:my-0 my-2">
-                <Link
-                  to="/groq"
-                  className="text-white hover:text-gray-400"
-                >
+                <Link to="/groq" className="text-white hover:text-gray-400">
                   Groq Ai
                 </Link>
               </li>
               <li>
-                <Link
-                  to="/login"
-                  className="text-white hover:text-gray-400"
-                >
+                <Link to="/login" className="text-white hover:text-gray-400">
                   Login
                 </Link>
               </li>
               <li className="sm:my-0 my-2">
-                <Link
-                  to="/signup"
-                  className="text-white hover:text-gray-400"
-                >
-                  Sign Up 
+                <Link to="/signup" className="text-white hover:text-gray-400">
+                  Sign Up
                 </Link>
               </li>
               <li>
-                <a 
-                  href="#"
-                  className="text-white hover:text-gray-400"
-                >
+                <Link to="/about" className="text-white hover:text-gray-400">
                   About
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="flex space-x-4 sm:justify-center  ">
               <a
-                href="javascript:;"
-                className="w-9 h-9 rounded-full bg-gray-800 flex justify-center items-center hover:bg-indigo-600"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="20"
-                  height="20"
-                  viewBox="0 0 20 20"
-                  fill="none"
-                >
-                  <path
-                    id="Vector"
-                    d="M11.3214 8.93666L16.4919 3.05566H15.2667L10.7772 8.16205L7.1914 3.05566H3.05566L8.47803 10.7774L3.05566 16.9446H4.28097L9.022 11.552L12.8088 16.9446H16.9446L11.3211 8.93666H11.3214ZM9.64322 10.8455L9.09382 10.0765L4.72246 3.95821H6.60445L10.1322 8.8959L10.6816 9.66481L15.2672 16.083H13.3852L9.64322 10.8458V10.8455Z"
-                    fill="white"
-                  />
-                </svg>
-              </a>
-              <a
-                href="javascript:;"
+                target="_blank"
+                href="https://www.instagram.com/mayaxhamzamalik"
                 className="w-9 h-9 rounded-full bg-gray-800 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -91,7 +59,8 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="javascript:;"
+                target="_blank"
+                href="https://www.linkedin.com/in/hamzamalik22"
                 className="w-9 h-9 rounded-full bg-gray-800 flex justify-center items-center hover:bg-indigo-600"
               >
                 <svg
@@ -106,32 +75,13 @@ const Footer = () => {
                   />
                 </svg>
               </a>
-              <a
-                href="javascript:;"
-                className="w-9 h-9 rounded-full bg-gray-800 flex justify-center items-center hover:bg-indigo-600"
-              >
-                <svg
-                  className="w-[1.25rem] h-[0.875rem] text-white"
-                  viewBox="0 0 16 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </a>
             </div>
           </div>
           {/* <!--Grid--> */}
           <div className="py-7 border-t border-gray-700">
             <div className="flex items-center justify-center">
               <span className="text-gray-400 ">
-                ©<Link to="/">HamzaMalik</Link>2024, All rights
-                reserved.
+                ©<Link to="/">HamzaMalik</Link>2024, All rights reserved.
               </span>
             </div>
           </div>

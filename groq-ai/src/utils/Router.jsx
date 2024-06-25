@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import GroqAi from "../pages/GroqAi";
+import About from "../pages/About";
 
 const Router = () => {
   return (
@@ -13,6 +14,7 @@ const Router = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/groq" element={<GroqAi />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );

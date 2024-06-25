@@ -13,8 +13,9 @@ const Features = () => {
               Revolutionary Features
             </h2>
             <p class="text-lg font-normal text-zinc-300 max-w-md md:max-w-2xl mx-auto">
-              Provides advanced features like time tracking, integrating with
-              third party apps (calendar / Google drive), creating subtasks.
+              The LPU™ Inference Engine by Groq is a hardware and software
+              platform that delivers exceptional compute speed, quality, and
+              energy efficiency.
             </p>
           </div>
           <div class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
@@ -38,10 +39,11 @@ const Features = () => {
                 </svg>
               </div>
               <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
-                Revolutionary Projectview
+                Seamless Model Switching
               </h4>
               <p class="text-sm font-normal text-zinc-300">
-                plan and structure work how you want. Quickly organizing tasks.
+                Switch between AI models effortlessly with a simple dropdown
+                menu.
               </p>
             </div>
             <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
@@ -77,11 +79,11 @@ const Features = () => {
                 </svg>
               </div>
               <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
-                App Integrations
+                Multi-Device Compatibility
               </h4>
               <p class="text-sm font-normal text-zinc-300">
-                Bring all your tools and data together. Also join with hundreds
-                of other apps.
+                Use Groq AI on any device, including desktops, tablets, and
+                smartphones.
               </p>
             </div>
             <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
@@ -103,11 +105,10 @@ const Features = () => {
                 </svg>
               </div>
               <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
-                Data Reporting
+                Real-Time Responses
               </h4>
               <p class="text-sm font-normal text-zinc-300">
-                Get real time insight into progress and allows teams to track
-                their work habits
+                Get fast and accurate answers to your queries in real-time.
               </p>
             </div>
             <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
@@ -129,11 +130,10 @@ const Features = () => {
                 </svg>
               </div>
               <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
-                Workflow Builder
+                Continuous Improvements
               </h4>
               <p class="text-sm font-normal text-zinc-300">
-                Automated processes to coordinate your teams and increase
-                communication.
+                Regular updates bring new features and enhancements.
               </p>
             </div>
           </div>

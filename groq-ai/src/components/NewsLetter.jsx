@@ -10,8 +10,9 @@ const NewsLetter = () => {
               Sign up for our newsletter
             </h2>
             <p class="mx-auto mb-8 max-w-2xl font-light text-gray-500 md:mb-12 sm:text-xl dark:text-gray-400">
-              Stay up to date with the roadmap progress, announcements and
-              exclusive discounts feel free to sign up with your email.
+              Join our newsletter to receive the latest updates, tips, and
+              exclusive offers directly in your inbox. Stay informed about new
+              features, AI model improvements, and more!
             </p>
             <form action="#">
               <div class="items-center mx-auto mb-3 space-y-4 max-w-screen-sm sm:flex sm:space-y-0">
