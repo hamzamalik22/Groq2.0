@@ -3,48 +3,48 @@ import React from "react";
 const Pricing = () => {
   return (
     <div>
-      <section class="py-24 pt-12 bg-zinc-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mb-12">
-            <h2 class="font-manrope text-5xl text-center font-bold text-zinc-200 mb-4">
+      <section className="py-24 pt-12 bg-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-12">
+            <h2 className="font-manrope text-5xl text-center font-bold text-zinc-200 mb-4">
               Choose your plan{" "}
             </h2>
-            <p class="text-zinc-400 text-center leading-6 mb-9">
+            <p className="text-zinc-400 text-center leading-6 mb-9">
               7 Days free trial. No credit card required.
             </p>
             {/* <!--Switch--> */}
-            <div class="flex justify-center items-center">
-              <label class="min-w-[3.5rem] text-xl relative text-zinc-400 mr-4 font-medium">
+            <div className="flex justify-center items-center">
+              <label className="min-w-[3.5rem] text-xl relative text-zinc-400 mr-4 font-medium">
                 Bill Monthly
               </label>
               <input
                 type="checkbox"
                 id="basic-with-description"
-                class="relative shrink-0 w-11 h-6 p-0.5 bg-indigo-100 checked:bg-none checked:bg-indigo-100 rounded-full cursor-pointer transition-colors ease-in-out duration-200  focus:border-blue-600  appearance-none 
+                className="relative shrink-0 w-11 h-6 p-0.5 bg-indigo-100 checked:bg-none checked:bg-indigo-100 rounded-full cursor-pointer transition-colors ease-in-out duration-200  focus:border-blue-600  appearance-none 
 
                             before:inline-block before:w-5 before:h-5 before:bg-indigo-600 checked:before:bg-indigo-600 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform  before:transition before:ease-in-out before:duration-200 "
               />
-              <label class="relative min-w-[3.5rem] font-medium text-xl text-zinc-400 ml-4 ">
+              <label className="relative min-w-[3.5rem] font-medium text-xl text-zinc-400 ml-4 ">
                 Bill Yearly
               </label>
             </div>
             {/* <!--Switch End--> */}
           </div>
           {/* <!--Grid--> */}
-          <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
+          <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
             {/* <!--Pricing Card--> */}
-            <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
-              <h3 class="font-manrope text-2xl font-bold mb-3">Free</h3>
-              <div class="flex items-center mb-6">
-                <span class="font-manrope mr-2 text-6xl font-semibold">$0</span>
-                <span class="text-xl text-gray-500 ">/ month</span>
+            <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+              <h3 className="font-manrope text-2xl font-bold mb-3">Free</h3>
+              <div className="flex items-center mb-6">
+                <span className="font-manrope mr-2 text-6xl font-semibold">$0</span>
+                <span className="text-xl text-gray-500 ">/ month</span>
               </div>
               {/* <!--List--> */}
-              <ul class="mb-12 space-y-6 text-left text-lg text-gray-500">
-                <li class="flex items-center space-x-4">
+              <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -59,10 +59,10 @@ const Pricing = () => {
                   </svg>
                   <span>Assistance with writing, problem solving and more</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -77,10 +77,10 @@ const Pricing = () => {
                   </svg>
                   <span>Limited Tokens</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -95,10 +95,10 @@ const Pricing = () => {
                   </svg>
                   <span>Fewer Models</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -116,31 +116,31 @@ const Pricing = () => {
               </ul>
               <a
                 href="javascript:;"
-                class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
+                className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
               >
                 Get Started
               </a>
               {/* <!--List End--> */}
             </div>
             {/* <!--Pricing Card--> */}
-            <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
-              <div class="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl p-3 text-center text-white">
+            <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
+              <div className="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl p-3 text-center text-white">
                 MOST POPULAR
               </div>
-              <div class="p-6 xl:py-9 xl:px-12">
-                <h3 class="font-manrope text-2xl font-bold mb-3">Advanced</h3>
-                <div class="flex items-center mb-6">
-                  <span class="font-manrope mr-2 text-6xl font-semibold text-indigo-600">
+              <div className="p-6 xl:py-9 xl:px-12">
+                <h3 className="font-manrope text-2xl font-bold mb-3">Advanced</h3>
+                <div className="flex items-center mb-6">
+                  <span className="font-manrope mr-2 text-6xl font-semibold text-indigo-600">
                     $20
                   </span>
-                  <span class="text-xl text-gray-500 ">/ month</span>
+                  <span className="text-xl text-gray-500 ">/ month</span>
                 </div>
                 {/* <!--List--> */}
-                <ul class="mb-12 space-y-6 text-left text-lg ">
-                  <li class="flex items-center space-x-4">
+                <ul className="mb-12 space-y-6 text-left text-lg ">
+                  <li className="flex items-center space-x-4">
                     {/* <!-- Icon --> */}
                     <svg
-                      class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
                       viewBox="0 0 30 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -155,10 +155,10 @@ const Pricing = () => {
                     </svg>
                     <span>Early access to new features</span>
                   </li>
-                  <li class="flex items-center space-x-4">
+                  <li className="flex items-center space-x-4">
                     {/* <!-- Icon --> */}
                     <svg
-                      class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
                       viewBox="0 0 30 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -171,12 +171,14 @@ const Pricing = () => {
                         stroke-linejoin="round"
                       />
                     </svg>
-                    <span>Access to advanced data analysis and web browsing</span>
+                    <span>
+                      Access to advanced data analysis and web browsing
+                    </span>
                   </li>
-                  <li class="flex items-center space-x-4">
+                  <li className="flex items-center space-x-4">
                     {/* <!-- Icon --> */}
                     <svg
-                      class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
                       viewBox="0 0 30 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -191,10 +193,10 @@ const Pricing = () => {
                     </svg>
                     <span>Groq image generation</span>
                   </li>
-                  <li class="flex items-center space-x-4">
+                  <li className="flex items-center space-x-4">
                     {/* <!-- Icon --> */}
                     <svg
-                      class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
                       viewBox="0 0 30 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -209,10 +211,10 @@ const Pricing = () => {
                     </svg>
                     <span>Create and use custom Models</span>
                   </li>
-                  <li class="flex items-center space-x-4">
+                  <li className="flex items-center space-x-4">
                     {/* <!-- Icon --> */}
                     <svg
-                      class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                      className="flex-shrink-0 w-6 h-6 text-indigo-600"
                       viewBox="0 0 30 30"
                       fill="none"
                       xmlns="http://www.w3.org/2000/svg"
@@ -230,7 +232,7 @@ const Pricing = () => {
                 </ul>
                 <a
                   href="javascript:;"
-                  class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700"
+                  className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700"
                 >
                   Purchase Plan
                 </a>
@@ -238,20 +240,20 @@ const Pricing = () => {
               </div>
             </div>
             {/* <!--Pricing Card--> */}
-            <div class="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
-              <h3 class="font-manrope text-2xl font-bold mb-3">Team</h3>
-              <div class="flex items-center mb-6">
-                <span class="font-manrope mr-2 text-6xl font-semibold">
+            <div className="flex flex-col mx-auto max-w-sm text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-gray-100">
+              <h3 className="font-manrope text-2xl font-bold mb-3">Team</h3>
+              <div className="flex items-center mb-6">
+                <span className="font-manrope mr-2 text-6xl font-semibold">
                   $25
                 </span>
-                <span class="text-xl text-gray-500 ">/ month</span>
+                <span className="text-xl text-gray-500 ">/ month</span>
               </div>
               {/* <!--List--> */}
-              <ul class="mb-12 space-y-6 text-left text-lg text-gray-500">
-                <li class="flex items-center space-x-4">
+              <ul className="mb-12 space-y-6 text-left text-lg text-gray-500">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -266,10 +268,10 @@ const Pricing = () => {
                   </svg>
                   <span>Higher limits for all models</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -284,10 +286,10 @@ const Pricing = () => {
                   </svg>
                   <span>Create and share models with your workspace</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -302,10 +304,10 @@ const Pricing = () => {
                   </svg>
                   <span>Admin console for workspace management</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -320,10 +322,10 @@ const Pricing = () => {
                   </svg>
                   <span>Team data excluded from training by default.</span>
                 </li>
-                <li class="flex items-center space-x-4">
+                <li className="flex items-center space-x-4">
                   {/* <!-- Icon --> */}
                   <svg
-                    class="flex-shrink-0 w-6 h-6 text-indigo-600"
+                    className="flex-shrink-0 w-6 h-6 text-indigo-600"
                     viewBox="0 0 30 30"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -341,7 +343,7 @@ const Pricing = () => {
               </ul>
               <a
                 href="javascript:;"
-                class="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
+                className="py-2.5 px-5 bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700"
               >
                 Purchase Plan
               </a>

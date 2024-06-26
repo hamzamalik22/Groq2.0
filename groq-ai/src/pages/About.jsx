@@ -5,58 +5,58 @@ import profile from "../images/hamza.jpg";
 
 const About = () => {
   return (
-    <div className="min-h-screen bg-zinc-800">
+    <div classNameName="min-h-screen bg-zinc-800">
       <Navbar />
       <div>
-        <div class="bg-zinc-800">
-          <div class="container mx-auto py-8">
-            <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
-              <div class="col-span-4 sm:col-span-3">
-                <div class="bg-zinc-500 shadow rounded-lg p-6">
-                  <div class="flex flex-col items-center">
+        <div className="bg-zinc-800">
+          <div className="container mx-auto py-8">
+            <div className="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">
+              <div className="col-span-4 sm:col-span-3">
+                <div className="border shadow rounded-lg p-6">
+                  <div className="flex flex-col items-center">
                     <img
                       src={profile}
-                      class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
+                      className="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0"
                     ></img>
-                    <h1 class="text-xl font-bold">Hamza Malik</h1>
-                    <p class="text-gray-100">FullStack Developer</p>
-                    <div class="mt-6 flex flex-wrap gap-4 justify-center">
+                    <h1 className="text-xl font-bold">Hamza Malik</h1>
+                    <p className="text-gray-100">FullStack Developer</p>
+                    <div className="mt-6 flex flex-wrap gap-4 justify-center">
                       <a
                         target="_blank"
                         href="https://www.linkedin.com/in/hamzamalik22"
-                        class="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded"
+                        className="bg-purple-700 hover:bg-purple-500 text-white py-2 px-4 rounded"
                       >
                         Contact
                       </a>
                       <a
                         href="/resume.pdf"
-                        class="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
+                        className="bg-gray-300 hover:bg-gray-400 text-gray-700 py-2 px-4 rounded"
                         download
                       >
                         Resume
                       </a>
                     </div>
                   </div>
-                  <hr class="my-6 border-t border-gray-300" />
-                  <div class="flex flex-col">
-                    <span class="text-zinc-100 uppercase font-bold tracking-wider mb-2">
+                  <hr className="my-6 border-t border-gray-300" />
+                  <div className="flex flex-col">
+                    <span className="text-zinc-100 uppercase font-bold tracking-wider mb-2">
                       Skills
                     </span>
-                    <ul className="">
-                      <li class="mb-2">Python</li>
-                      <li class="mb-2">React</li>
-                      <li class="mb-2">Django</li>
-                      <li class="mb-2">HTML/CSS</li>
-                      <li class="mb-2">Tailwind Css</li>
-                      <li class="mb-2">DRF</li>
+                    <ul classNameName="text-zinc-200 italic">
+                      <li className="mb-2">Python</li>
+                      <li className="mb-2">React js</li>
+                      <li className="mb-2">Django</li>
+                      <li className="mb-2">HTML/CSS</li>
+                      <li className="mb-2">Tailwind Css</li>
+                      <li className="mb-2">DRF</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="col-span-4 sm:col-span-9">
-                <div class="bg-zinc-500 shadow rounded-lg p-6">
-                  <h2 class="text-xl font-bold mb-4">About Me</h2>
-                  <p class="text-zinc-200">
+              <div className="col-span-4 sm:col-span-9">
+                <div className="border shadow rounded-lg p-6">
+                  <h2 className="text-xl font-bold mb-4">About Me</h2>
+                  <p className="text-zinc-200">
                     I am a dedicated Web Developer currently pursuing a
                     Bachelor's Degree in Computer Science (BSCS). I specialize
                     in full stack development, utilizing Django for backend
@@ -66,12 +66,12 @@ const About = () => {
                     finish.
                   </p>
 
-                  <h3 class="font-semibold text-center mt-3 -mb-2">
+                  <h3 className="font-semibold text-center mt-3 -mb-2">
                     Find me on
                   </h3>
-                  <div class="flex justify-center items-center gap-6 my-6">
+                  <div className="flex justify-center items-center gap-6 my-6">
                     <a
-                      class="text-blue-600 hover:text-blue-400"
+                      className="text-blue-600 hover:text-blue-400"
                       aria-label="Visit TrendyMinds LinkedIn"
                       href="https://www.linkedin.com/in/hamzamalik22"
                       target="_blank"
@@ -79,7 +79,7 @@ const About = () => {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
-                        class="h-6"
+                        className="h-6"
                       >
                         <path
                           fill="currentColor"
@@ -89,7 +89,7 @@ const About = () => {
                     </a>
 
                     <a
-                      class="text-pink-600 hover:text-purple-400"
+                      className="text-pink-600 hover:text-purple-400"
                       aria-label="Visit TrendyMinds Instagram"
                       href="https://www.instagram.com/mayaxhamzamalik"
                       target="_blank"
@@ -97,7 +97,7 @@ const About = () => {
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"
-                        class="h-6"
+                        className="h-6"
                       >
                         <path
                           fill="currentColor"
@@ -107,30 +107,30 @@ const About = () => {
                     </a>
                   </div>
 
-                  <h2 class="text-xl font-bold mt-6 mb-4">Experience</h2>
-                  <div class="mb-6">
-                    <div class="flex justify-between flex-wrap gap-2 w-full">
-                      <span class="text-zinc-200 font-bold">
+                  <h2 className="text-xl font-bold mt-6 mb-4">Experience</h2>
+                  <div className="mb-6">
+                    <div className="flex justify-between flex-wrap gap-2 w-full">
+                      <span className="text-zinc-200 font-bold">
                         Freelance Full Stack Developer
                       </span>
                     </div>
-                    <p class="mt-2">
-                      <ul className="text-zinc-300">
-                        <li className="list-disc pb-2">
+                    <p className="mt-2">
+                      <ul classNameName="text-zinc-300">
+                        <li classNameName="list-disc pb-2">
                           Leveraged expertise in both front-end and back-end
                           development to build and maintain web applications for
                           a diverse range of clients.
                         </li>
-                        <li className="list-disc pb-2">
+                        <li classNameName="list-disc pb-2">
                           Proficient in HTML, CSS, JavaScript, Python, Django,
                           and various web development frameworks.
                         </li>
-                        <li className="list-disc pb-2">
+                        <li classNameName="list-disc pb-2">
                           Collaborated closely with clients to understand their
                           requirements and deliver high-quality solutions that
                           meet their expectations.
                         </li>
-                        <li className="list-disc pb-2">
+                        <li classNameName="list-disc pb-2">
                           Continuously updated skills and knowledge to stay
                           abreast of the latest web development trends and
                           technologies.
@@ -142,9 +142,8 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>  
       </div>
-
       <Footer />
     </div>
   );

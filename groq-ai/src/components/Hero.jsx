@@ -5,15 +5,15 @@ import { Link } from "react-router-dom";
 const Hero = () => {
   return (
     <div>
-      <section class="pt-8 lg:pt-16 bg-zinc-800 bg-center bg-cover">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
-          <div class="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4">
-            <span class="font-inter text-xs font-medium text-zinc-300 ml-3">
+      <section className="pt-8 lg:pt-16 bg-zinc-800 bg-center bg-cover">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center">
+          <div className="border border-indigo-600 p-1 w-60 mx-auto rounded-full flex items-center justify-between mb-4">
+            <span className="font-inter text-xs font-medium text-zinc-300 ml-3">
               Explore how to use for brands.
             </span>
             <a
-              href="javascript:;"
-              class="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
+              href="#"
+              className="w-8 h-8 rounded-full flex justify-center items-center bg-indigo-600"
             >
               <svg
                 width="17"
@@ -32,21 +32,21 @@ const Hero = () => {
               </svg>
             </a>
           </div>
-          <h1 class="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-zinc-300 mb-5 md:text-5xl leading-[50px]">
+          <h1 className="max-w-2xl mx-auto text-center font-manrope font-bold text-4xl text-zinc-300 mb-5 md:text-5xl leading-[50px]">
             Unlock the Full Potential of Your Data with
-            <span class="text-indigo-600"> Groq</span>
+            <span className="text-indigo-600"> Groq</span>
           </h1>
-          <p class="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-400 mb-9">
+          <p className="max-w-sm mx-auto text-center text-base font-normal leading-7 text-gray-400 mb-9">
             Rewrite the rules of intelligence with our unparalleled processing
             power and vision-driven AI framework.
           </p>
           <Link
             to="/signup"
-            class="w-auto inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
+            className="w-auto inline-flex items-center justify-center py-3 px-7 text-base font-semibold text-center text-white rounded-full bg-indigo-600 shadow-xs hover:bg-indigo-700 transition-all duration-500"
           >
             Create an account
             <svg
-              class="ml-2"
+              className="ml-2"
               width="20"
               height="20"
               viewBox="0 0 20 20"
@@ -62,7 +62,7 @@ const Hero = () => {
               />
             </svg>
           </Link>
-          <div class="w-full flex justify-center">
+          <div className="w-full flex justify-center">
             <img src={groqLaptop} alt="Dashboard image" />
           </div>
         </div>

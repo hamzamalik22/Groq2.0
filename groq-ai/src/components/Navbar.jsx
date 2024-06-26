@@ -1,18 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
+import { Context } from "../utils/Context";
 // import { useAuth } from "../utils/AuthContext";
 
 const Navbar = () => {
-//   const { user, logoutUser } = useAuth();
-    const [user, setUser] = useState(false);
+  //   const { user, logoutUser } = useAuth();
+
+  const { user, setUser } = useContext(Context);
 
   return (
     <nav className="bg-zinc-900 text-white p-4">
       <div className="mx-auto flex justify-between items-center">
-        <Link
-          to="/"
-          className="logo text-5xl md:pl-10  text-white"
-        >
+        <Link to="/" className="logo text-5xl md:pl-10  text-white">
           Groq
         </Link>
         <div className="flex items-center">

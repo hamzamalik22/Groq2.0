@@ -3,26 +3,26 @@ import React from "react";
 const Features = () => {
   return (
     <div>
-      <section class="py-24 pt-12 bg-zinc-800">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div class="mb-14 text-center">
-            <span class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">
+      <section className="py-24 pt-12 bg-zinc-800">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mb-14 text-center">
+            <span className="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">
               Features
             </span>
-            <h2 class="text-4xl text-center font-bold text-zinc-200 py-5">
+            <h2 className="text-4xl text-center font-bold text-zinc-200 py-5">
               Revolutionary Features
             </h2>
-            <p class="text-lg font-normal text-zinc-300 max-w-md md:max-w-2xl mx-auto">
+            <p className="text-lg font-normal text-zinc-300 max-w-md md:max-w-2xl mx-auto">
               The LPU™ Inference Engine by Groq is a hardware and software
               platform that delivers exceptional compute speed, quality, and
               energy efficiency.
             </p>
           </div>
-          <div class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
+          <div className="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+            <div className="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+              <div className="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
                 <svg
-                  class="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white"
+                  className="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white"
                   width="30"
                   height="30"
                   viewBox="0 0 30 30"
@@ -38,18 +38,18 @@ const Features = () => {
                   ></path>
                 </svg>
               </div>
-              <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
+              <h4 className="text-lg font-medium text-zinc-200 mb-3 capitalize">
                 Seamless Model Switching
               </h4>
-              <p class="text-sm font-normal text-zinc-300">
+              <p className="text-sm font-normal text-zinc-300">
                 Switch between AI models effortlessly with a simple dropdown
                 menu.
               </p>
             </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
+            <div className="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+              <div className="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
                 <svg
-                  class="stroke-pink-600 transition-all duration-500 group-hover:stroke-white"
+                  className="stroke-pink-600 transition-all duration-500 group-hover:stroke-white"
                   width="30"
                   height="30"
                   viewBox="0 0 30 30"
@@ -78,18 +78,18 @@ const Features = () => {
                   ></path>
                 </svg>
               </div>
-              <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
+              <h4 className="text-lg font-medium text-zinc-200 mb-3 capitalize">
                 Multi-Device Compatibility
               </h4>
-              <p class="text-sm font-normal text-zinc-300">
+              <p className="text-sm font-normal text-zinc-300">
                 Use Groq AI on any device, including desktops, tablets, and
                 smartphones.
               </p>
             </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
+            <div className="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+              <div className="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
                 <svg
-                  class="stroke-teal-600 transition-all duration-500 group-hover:stroke-white"
+                  className="stroke-teal-600 transition-all duration-500 group-hover:stroke-white"
                   width="30"
                   height="30"
                   viewBox="0 0 30 30"
@@ -104,17 +104,17 @@ const Features = () => {
                   ></path>
                 </svg>
               </div>
-              <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
+              <h4 className="text-lg font-medium text-zinc-200 mb-3 capitalize">
                 Real-Time Responses
               </h4>
-              <p class="text-sm font-normal text-zinc-300">
+              <p className="text-sm font-normal text-zinc-300">
                 Get fast and accurate answers to your queries in real-time.
               </p>
             </div>
-            <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
-              <div class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
+            <div className="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+              <div className="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
                 <svg
-                  class="stroke-orange-600 transition-all duration-500 group-hover:stroke-white"
+                  className="stroke-orange-600 transition-all duration-500 group-hover:stroke-white"
                   width="30"
                   height="30"
                   viewBox="0 0 30 30"
@@ -129,10 +129,10 @@ const Features = () => {
                   ></path>
                 </svg>
               </div>
-              <h4 class="text-lg font-medium text-zinc-200 mb-3 capitalize">
+              <h4 className="text-lg font-medium text-zinc-200 mb-3 capitalize">
                 Continuous Improvements
               </h4>
-              <p class="text-sm font-normal text-zinc-300">
+              <p className="text-sm font-normal text-zinc-300">
                 Regular updates bring new features and enhancements.
               </p>
             </div>
