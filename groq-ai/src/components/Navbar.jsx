@@ -1,12 +1,16 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../utils/Context";
-// import { useAuth } from "../utils/AuthContext";
+import { useFirebase } from "../firebase/AuthFirebaseContext";
 
 const Navbar = () => {
-  //   const { user, logoutUser } = useAuth();
-
   const { user, setUser } = useContext(Context);
+  const { userLogout } = useFirebase()
+
+  const kickTheUserOut = () =>{
+    userLogout()
+    setUser(false)
+  }
 
   return (
     <nav className="bg-zinc-900 text-white p-4">
@@ -21,10 +25,10 @@ const Navbar = () => {
                 to="/groq"
                 className="hidden md:block font-['DM Sans'] border bg-transparent border-black rounded-lg text-white py-2 px-4 mx-2 hover:bg-black hover:text-black"
               >
-                Notes App
+                Groq App
               </Link>
               <Link
-                onClick={logoutUser}
+                onClick={() => kickTheUserOut()}
                 className="max-[400px]:hidden bg-red-600 font-['DM Sans'] hover:bg-red-400 text-white rounded-lg py-2 px-4  mx-2"
               >
                 Logout

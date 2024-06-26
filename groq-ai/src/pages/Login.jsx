@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
-import { userLogin } from "../firebase/AuthFirebase";
+import { Context } from "../utils/Context";
+import { useFirebase } from "../firebase/AuthFirebaseContext";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { register, handleSubmit } = useForm();
+  const { setUser } = useContext(Context);
+  const { userLogin } = useFirebase()
+  const navigate = useNavigate()
 
   const handleForm = (data) => {
     const { email, password } = data;
@@ -18,7 +23,14 @@ const Login = () => {
       password,
     };
 
-    userLogin(userInfo);
+    try {
+      userLogin(userInfo);
+      setUser(true)
+      navigate('/groq')
+
+    } catch (error) {
+      console.log('error in login page',error)
+    }
   };
 
   return (

@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
-import { userSignup } from "../firebase/AuthFirebase";
+import { useFirebase } from "../firebase/AuthFirebaseContext";
 
 const Signup = () => {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
-
+  const { userSignup } = useFirebase();
   const { register, handleSubmit } = useForm();
 
   const handleForm = (data) => {

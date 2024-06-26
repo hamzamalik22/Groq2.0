@@ -14,6 +14,10 @@ const ContextProvider = (props) => {
   const [selectedModel, setSelectedModel] = useState("llama3-8b-8192");
   const [user, setUser] = useState(false);
 
+
+  const [userEmail, setUserEmail] = useState("");
+
+
   const onSent = async (prompt, model) => {
     setResultData("");
     setLoading(true);
@@ -58,6 +62,8 @@ const ContextProvider = (props) => {
     setSelectedModel,
     user,
     setUser,
+    userEmail,
+    setUserEmail,
   };
 
   return (
