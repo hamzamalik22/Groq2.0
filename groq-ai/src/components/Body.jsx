@@ -8,7 +8,7 @@ import { GrSend } from "react-icons/gr";
 import { MdMenu } from "react-icons/md";
 import { FaRegCopy } from "react-icons/fa";
 import groqimg from "../images/groq.svg";
-import { Context } from "../utils/Context";
+import { AppContext } from "../utils/Context";
 import Loader from "./Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -27,7 +27,7 @@ const Body = () => {
     setInput,
     selectedModel,
     setSelectedModel,
-  } = useContext(Context);
+  } = useContext(AppContext);
 
   const [dropdownOpen, setDropdownOpen] = useState(false);
 

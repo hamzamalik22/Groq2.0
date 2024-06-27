@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import { Context } from "./Context";
+import { useFirebase } from "../firebase/AuthFirebaseContext";
 import { Navigate, Outlet } from "react-router-dom";
 
 const PrivateRoutes = () => {
-  const { user } = useContext(Context);
+  const { currentUser } = useFirebase();
 
-  return user ? <Outlet /> : <Navigate to="/login" />;
+  return currentUser !== null ? <Outlet /> : <Navigate to="/login" />;
 };
 
 export default PrivateRoutes;

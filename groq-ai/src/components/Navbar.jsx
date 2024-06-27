@@ -1,15 +1,12 @@
-import React, { useContext, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Context } from "../utils/Context";
 import { useFirebase } from "../firebase/AuthFirebaseContext";
 
 const Navbar = () => {
-  const { user, setUser } = useContext(Context);
-  const { userLogout } = useFirebase()
+  const { userLogout, currentUser } = useFirebase()
 
   const kickTheUserOut = () =>{
     userLogout()
-    setUser(false)
   }
 
   return (
@@ -19,11 +16,11 @@ const Navbar = () => {
           Groq
         </Link>
         <div className="flex items-center">
-          {user ? (
+          {currentUser !== null ? (
             <>
               <Link
                 to="/groq"
-                className="hidden md:block font-['DM Sans'] border bg-transparent border-black rounded-lg text-white py-2 px-4 mx-2 hover:bg-black hover:text-black"
+                className="hidden md:block font-['DM Sans'] border bg-transparent rounded-lg text-white py-2 px-4 mx-2 hover:bg-white hover:text-black"
               >
                 Groq App
               </Link>

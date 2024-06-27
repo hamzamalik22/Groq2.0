@@ -4,10 +4,11 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   getAuth,
+  onAuthStateChanged,
 } from "firebase/auth";
-import { createContext, useContext } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import { initializeApp } from "firebase/app";
-import { Context } from "../utils/Context";
+import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: conf.firebaseApiKey,
@@ -27,48 +28,72 @@ const FirebaseContext = createContext(null);
 export const useFirebase = () => useContext(FirebaseContext);
 
 export const FirebaseProvider = (props) => {
-  const userSignup = (data) => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const navigate = useNavigate();
+
+  const userSignup = async (data) => {
     const { email, password, confirmPassword } = data;
 
     try {
       if (password !== confirmPassword) {
-        alert("Passwords don't match..");
+        alert("Passwords don't match.");
         return;
-      } else {
-        createUserWithEmailAndPassword(firebaseAuth, email, password);
-        alert("Account Created Successfully");
       }
+      await createUserWithEmailAndPassword(firebaseAuth, email, password);
+      alert("Account Created Successfully");
     } catch (error) {
       console.error("Custom Error in Sign up", error);
     }
   };
 
-  const userLogin = (data) => {
+  const userLogin = async (data) => {
     const { email, password } = data;
 
     try {
-      signInWithEmailAndPassword(firebaseAuth, email, password);
-      console.log("login Successful");
+      await signInWithEmailAndPassword(firebaseAuth, email, password);
+      navigate("/groq");
+      console.log("Login Successful");
+      checkUserStatus();
     } catch (error) {
       console.error("Custom Error in Login", error);
     }
   };
 
-  const userLogout = (data) => {
+  const userLogout = async () => {
     try {
-      signOut(firebaseAuth);
-      console.log("logout Successful");
+      await signOut(firebaseAuth);
+      console.log("Logout Successful");
     } catch (error) {
-      console.error("Custom Error in logout", error);
+      console.error("Custom Error in Logout", error);
     }
   };
+
+  const checkUserStatus = () => {
+    onAuthStateChanged(firebaseAuth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+        console.log("user set ");
+      } else {
+        setCurrentUser(null);
+      }
+    });
+  };
+
+  useEffect(() => {
+    checkUserStatus();
+  }, []);
 
   const contextValue = {
     userSignup,
     userLogin,
     userLogout,
-  }
+    currentUser,
+    setCurrentUser,
+  };
 
-  return <FirebaseContext.Provider value={contextValue} >{props.children}</FirebaseContext.Provider>;
+  return (
+    <FirebaseContext.Provider value={contextValue}>
+      {props.children}
+    </FirebaseContext.Provider>
+  );
 };
-

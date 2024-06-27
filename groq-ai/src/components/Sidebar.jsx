@@ -5,11 +5,18 @@ import { GrCircleQuestion } from "react-icons/gr";
 import { FaHistory } from "react-icons/fa";
 import { IoSettingsSharp } from "react-icons/io5";
 import { FiMessageSquare } from "react-icons/fi";
-import { Context } from "../utils/Context";
+import { AppContext } from "../utils/Context";
 
 const Sidebar = () => {
-  const { toggle, setToggle, onSent, prevPrompts, setRecentPrompt, newChat, selectedModel } =
-    useContext(Context);
+  const {
+    toggle,
+    setToggle,
+    onSent,
+    prevPrompts,
+    setRecentPrompt,
+    newChat,
+    selectedModel,
+  } = useContext(AppContext);
 
   const loadPrompt = async (prompt, model) => {
     setRecentPrompt(prompt);
@@ -73,8 +80,14 @@ const Sidebar = () => {
                 <MdMenu />
               </span>
 
-              <div onClick={() => newChat()} className="flex bg-zinc-800 w-32 h-10 rounded-full">
-                <span onClick={() => newChat()} className="w-10 h-10 pl-2 bg-zinc-800 rounded-full justify-center items-center flex cursor-pointer">
+              <div
+                onClick={() => newChat()}
+                className="flex bg-zinc-800 w-32 h-10 rounded-full"
+              >
+                <span
+                  onClick={() => newChat()}
+                  className="w-10 h-10 pl-2 bg-zinc-800 rounded-full justify-center items-center flex cursor-pointer"
+                >
                   <FaPlus />
                 </span>
                 <span className="w-full h-10 p-4 bg-zinc-800 justify-center rounded-r-full items-center flex cursor-pointer">
@@ -93,7 +106,7 @@ const Sidebar = () => {
                 {prevPrompts.slice(-5).map((item, index) => {
                   return (
                     <li
-                      onClick={() => loadPrompt(item,selectedModel)}
+                      onClick={() => loadPrompt(item, selectedModel)}
                       key={index}
                       className="truncate py-2 px-2 flex items-center gap-2 hover:bg-zinc-700 hover:rounded-full hover:w-full cursor-pointer"
                     >

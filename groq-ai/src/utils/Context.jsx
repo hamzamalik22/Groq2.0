@@ -1,9 +1,8 @@
 import { createContext, useState } from "react";
-import { main } from "./config";
 
-export const Context = createContext();
+export const AppContext = createContext();
 
-const ContextProvider = (props) => {
+const AppContextProvider = (props) => {
   const [toggle, setToggle] = useState(false);
   const [input, setInput] = useState("");
   const [recentPrompt, setRecentPrompt] = useState("");
@@ -12,11 +11,6 @@ const ContextProvider = (props) => {
   const [loading, setLoading] = useState(false);
   const [resultData, setResultData] = useState("");
   const [selectedModel, setSelectedModel] = useState("llama3-8b-8192");
-  const [user, setUser] = useState(false);
-
-
-  const [userEmail, setUserEmail] = useState("");
-
 
   const onSent = async (prompt, model) => {
     setResultData("");
@@ -60,15 +54,11 @@ const ContextProvider = (props) => {
     newChat,
     selectedModel,
     setSelectedModel,
-    user,
-    setUser,
-    userEmail,
-    setUserEmail,
   };
 
   return (
-    <Context.Provider value={contextValue}>{props.children}</Context.Provider>
+    <AppContext.Provider value={contextValue}>{props.children}</AppContext.Provider>
   );
 };
 
-export default ContextProvider;
+export default AppContextProvider;
