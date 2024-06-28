@@ -8,11 +8,11 @@ const Footer = () => {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {/* <!--Grid--> */}
           <div className="py-16 flex justify-between items-center flex-col gap-8 lg:flex-row">
-            <a className="flex justify-center ">
+            <p className="flex justify-center ">
               <Link to="/" className="logo text-5xl md:pl-10  text-white">
                 Groq
               </Link>
-            </a>
+            </p>
             <ul className="text-lg text-center sm:flex items-cente justify-center gap-14 lg:gap-10 xl:gap-14 transition-all duration-500">
               <li>
                 <Link to="/" className="text-white hover:text-gray-400">

@@ -72,7 +72,8 @@ export const FirebaseProvider = (props) => {
     onAuthStateChanged(firebaseAuth, (user) => {
       if (user) {
         setCurrentUser(user);
-        console.log("user set ");
+        console.log("User Set");
+        // console.log(user);
       } else {
         setCurrentUser(null);
       }

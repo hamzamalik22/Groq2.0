@@ -42,7 +42,7 @@ const Faqs = () => {
               <h3 className="font-semibold md:col-span-5">
                 What AI models are available on Groq AI?
               </h3>
-              <p className="md:pl-0 md:col-span-7">
+              <div className="md:pl-0 md:col-span-7">
                 Groq AI supports multiple AI models including:
                 <ul className="list-disc pl-6">
                   <li>llama3-8b-8192</li>
@@ -51,7 +51,7 @@ const Faqs = () => {
                   <li>gemma-7b-it</li>
                   <li>whisper-large-v3</li>
                 </ul>
-              </p>
+              </div>
             </div>
           </div>
         </div>

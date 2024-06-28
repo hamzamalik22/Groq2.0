@@ -13,6 +13,8 @@ import Loader from "./Loader";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { GoSingleSelect } from "react-icons/go";
+import { Link } from "react-router-dom";
+import { useFirebase } from "../firebase/AuthFirebaseContext";
 
 const Body = () => {
   const {
@@ -29,7 +31,12 @@ const Body = () => {
     setSelectedModel,
   } = useContext(AppContext);
 
+  const { userLogout } = useFirebase();
+
   const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  const [dropdown, setDropdown] = useState(false);
+  console.log(dropdown);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -122,9 +129,28 @@ const Body = () => {
             </div>
           </div>
           <div className="User">
-            <span className="text-3xl cursor-pointer">
+            <span
+              onClick={() => setDropdown(!dropdown)}
+              className="text-3xl cursor-pointer"
+            >
               <RiUser4Fill />
             </span>
+            {dropdown && (
+              <div className="flex flex-col items-center absolute right-8 text-xs mt-2 w-36 bg-zinc-800 border border-zinc-700 rounded-md shadow-lg z-10">
+                <Link
+                  to="/"
+                  className="px-4 py-2 cursor-pointer hover:bg-zinc-700 border-b"
+                >
+                  Home
+                </Link>
+                <button
+                  onClick={() => userLogout()}
+                  className="px-4 py-2 cursor-pointer hover:bg-zinc-700"
+                >
+                  Logout
+                </button>
+              </div>
+            )}
           </div>
         </nav>
 

@@ -5,7 +5,7 @@ import profile from "../images/hamza.jpg";
 
 const About = () => {
   return (
-    <div classNameName="min-h-screen bg-zinc-800">
+    <div className="min-h-screen bg-zinc-800">
       <Navbar />
       <div>
         <div className="bg-zinc-800">
@@ -42,7 +42,7 @@ const About = () => {
                     <span className="text-zinc-100 uppercase font-bold tracking-wider mb-2">
                       Skills
                     </span>
-                    <ul classNameName="text-zinc-200 italic">
+                    <ul className="text-zinc-200 italic">
                       <li className="mb-2">Python</li>
                       <li className="mb-2">React js</li>
                       <li className="mb-2">Django</li>
@@ -114,29 +114,29 @@ const About = () => {
                         Freelance Full Stack Developer
                       </span>
                     </div>
-                    <p className="mt-2">
-                      <ul classNameName="text-zinc-300">
-                        <li classNameName="list-disc pb-2">
+                    <div className="mt-2">
+                      <ul className="text-zinc-300">
+                        <li className="list-disc pb-2">
                           Leveraged expertise in both front-end and back-end
                           development to build and maintain web applications for
                           a diverse range of clients.
                         </li>
-                        <li classNameName="list-disc pb-2">
+                        <li className="list-disc pb-2">
                           Proficient in HTML, CSS, JavaScript, Python, Django,
                           and various web development frameworks.
                         </li>
-                        <li classNameName="list-disc pb-2">
+                        <li className="list-disc pb-2">
                           Collaborated closely with clients to understand their
                           requirements and deliver high-quality solutions that
                           meet their expectations.
                         </li>
-                        <li classNameName="list-disc pb-2">
+                        <li className="list-disc pb-2">
                           Continuously updated skills and knowledge to stay
                           abreast of the latest web development trends and
                           technologies.
                         </li>
                       </ul>
-                    </p>
+                    </div>
                   </div>
                 </div>
               </div>

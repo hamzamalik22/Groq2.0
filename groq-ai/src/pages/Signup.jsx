@@ -1,12 +1,20 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import { useForm } from "react-hook-form";
 import { useFirebase } from "../firebase/AuthFirebaseContext";
+import { Link, useNavigate } from "react-router-dom";
 
 const Signup = () => {
-  const { userSignup } = useFirebase();
+  const navigate = useNavigate();
+  const { userSignup, currentUser } = useFirebase();
   const { register, handleSubmit } = useForm();
+
+  useEffect(() => {
+    if (currentUser) {
+      navigate("/groq");
+    }
+  }, []);
 
   const handleForm = (data) => {
     const { email, password, confirmPassword } = data;
@@ -40,7 +48,7 @@ const Signup = () => {
               >
                 <div>
                   <label
-                    for="email"
+                    htmlFor="email"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Your email
@@ -57,7 +65,7 @@ const Signup = () => {
                 </div>
                 <div>
                   <label
-                    for="password"
+                    htmlFor="password"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Password
@@ -74,7 +82,7 @@ const Signup = () => {
                 </div>
                 <div>
                   <label
-                    for="confirm-password"
+                    htmlFor="confirm-password"
                     className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Confirm password
@@ -97,12 +105,12 @@ const Signup = () => {
                 </button>
                 <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                   Already have an account?{" "}
-                  <a
-                    href="#"
+                  <Link
+                    to="/login"
                     className="font-medium text-primary-600 hover:underline dark:text-primary-500"
                   >
                     Login here
-                  </a>
+                  </Link>
                 </p>
               </form>
             </div>

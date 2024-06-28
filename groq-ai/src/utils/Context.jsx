@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { main } from "../utils/config";
 
 export const AppContext = createContext();
 
@@ -57,7 +58,9 @@ const AppContextProvider = (props) => {
   };
 
   return (
-    <AppContext.Provider value={contextValue}>{props.children}</AppContext.Provider>
+    <AppContext.Provider value={contextValue}>
+      {props.children}
+    </AppContext.Provider>
   );
 };
 

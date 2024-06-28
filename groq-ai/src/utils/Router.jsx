@@ -17,7 +17,6 @@ const Router = () => {
         <Route element={<PrivateRoutes />}>
           <Route path="/groq" element={<GroqAi />} />
         </Route>
-
         <Route path="/about" element={<About />} />
       </Routes>
     </>
