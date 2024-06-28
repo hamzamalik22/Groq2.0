@@ -205,9 +205,9 @@ const Body = () => {
                   <Loader />
                 </div>
               ) : (
-                <div className="flex result-data">
+                <div className="flex justify-center result-data">
                   <img
-                    className="w-12 h-12 rounded-full max-[430px]:w-10 max-[430px]:h-10"
+                    className="w-12 h-12 rounded-full max-[430px]:w-9 max-[430px]:h-9"
                     src="https://img.freepik.com/premium-photo/3d-rendering-female-robot-isolated-black-background-with-neon-lights-generative-ai_646737-2105.jpg"
                     alt="avatar"
                   />

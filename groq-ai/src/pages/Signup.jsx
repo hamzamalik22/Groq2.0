@@ -89,7 +89,7 @@ const Signup = () => {
                   </label>
                   <input
                     {...register("confirmPassword")}
-                    type="confirm-password"
+                    type="password"
                     name="confirmPassword"
                     id="confirm-password"
                     placeholder="••••••••"
