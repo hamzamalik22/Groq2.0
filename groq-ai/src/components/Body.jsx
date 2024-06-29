@@ -36,7 +36,6 @@ const Body = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const [dropdown, setDropdown] = useState(false);
-
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
     toast.success("Copied to clipboard!");
