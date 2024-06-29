@@ -26,6 +26,7 @@ const Sidebar = () => {
   return (
     <>
       {toggle === false ? (
+        // close
         <>
           {/* <-- for Desktop --> */}
 
@@ -71,6 +72,7 @@ const Sidebar = () => {
         </>
       ) : (
         <>
+        {/* open */}
           <div className="sticky pr-2 top-0 bg-[#1E1F20] w-[60%] min-[900px]:w-[22%] h-screen text-white flex flex-col justify-between">
             <div className="upper flex flex-col pl-4 pt-8 gap-10 text-xl">
               <span
