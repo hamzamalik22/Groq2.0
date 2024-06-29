@@ -71,7 +71,7 @@ const Sidebar = () => {
         </>
       ) : (
         <>
-          <div className="sticky md:stikcy top-0 left-0 z-50 w-[60%] min-[900px]:relative bg-[#1E1F20] min-[900px]:w-[22%] h-screen text-white flex flex-col justify-between">
+          <div className="sticky pr-2 top-0 bg-[#1E1F20] w-[60%] min-[900px]:w-[22%] h-screen text-white flex flex-col justify-between">
             <div className="upper flex flex-col pl-4 pt-8 gap-10 text-xl">
               <span
                 className="w-10 h-10 hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer"

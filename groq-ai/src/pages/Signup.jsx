@@ -19,9 +19,9 @@ const Signup = () => {
   const handleForm = (data) => {
     const { email, password, confirmPassword } = data;
 
-    console.log(email);
-    console.log(password);
-    console.log(confirmPassword);
+    // console.log(email);
+    // console.log(password);
+    // console.log(confirmPassword);
 
     let userInfo = {
       email,

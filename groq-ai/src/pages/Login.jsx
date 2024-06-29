@@ -19,8 +19,8 @@ const Login = () => {
   const handleForm = (data) => {
     const { email, password } = data;
 
-    console.log(email);
-    console.log(password);
+    // console.log(email);
+    // console.log(password);
 
     let userInfo = {
       email,

@@ -36,7 +36,6 @@ const Body = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const [dropdown, setDropdown] = useState(false);
-  console.log(dropdown);
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);
@@ -89,14 +88,17 @@ const Body = () => {
       <div className="relative bg-zinc-900 w-full min-h-screen max-h-fit text-white">
         <nav className="flex justify-between items-center pt-8 px-1 min-[900px]:p-8">
           <div className="flex items-baseline gap-4">
-            <div className="min-[900px]:hidden pl-2 text-2xl">
-              <span
-                className="w-10 h-10 hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer"
-                onClick={() => setToggle(!toggle)}
-              >
-                <MdMenu />
-              </span>
-            </div>
+            {!toggle && (
+              <div className="min-[900px]:hidden pl-2 text-2xl">
+                <span
+                  className="w-10 h-10 hover:bg-zinc-700 rounded-full flex items-center justify-center cursor-pointer"
+                  onClick={() => setToggle(!toggle)}
+                >
+                  <MdMenu />
+                </span>
+              </div>
+            )}
+
             <h1 className="logo text-4xl">GROQ</h1>
             <div className="relative">
               <button

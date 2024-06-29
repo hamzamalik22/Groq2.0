@@ -48,7 +48,7 @@ export const FirebaseProvider = (props) => {
       await createUserWithEmailAndPassword(firebaseAuth, email, password);
       navigate("/login");
     } catch (error) {
-      console.error("Custom Error in Sign up", error);
+      // console.error("Custom Error in Sign up", error);
       toast.error("Error creating account. Please try again.");
     } finally {
       setAuthLoader(false);
@@ -64,7 +64,7 @@ export const FirebaseProvider = (props) => {
       navigate("/groq");
       checkUserStatus();
     } catch (error) {
-      console.error("Custom Error in Login", error);
+      // console.error("Custom Error in Login", error);
       toast.error("Error logging in. Please check your credentials.");
     } finally {
       setAuthLoader(false);
@@ -77,7 +77,7 @@ export const FirebaseProvider = (props) => {
       await signOut(firebaseAuth);
       toast.success("Logout Successful");
     } catch (error) {
-      console.error("Custom Error in Logout", error);
+      // console.error("Custom Error in Logout", error);
       toast.error("Error logging out. Please try again.");
     } finally {
       setAuthLoader(false);
